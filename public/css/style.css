@@ -1,0 +1,86 @@
+body {
+    background-color: #0f172a;
+}
+
+.bg-white.dark\:bg-gray-800 {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+thead tr {
+    background: transparent;
+}
+
+th {
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    padding: 15px;
+}
+
+tbody tr {
+    background-color: #0f172a;
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+}
+
+td {
+    padding: 15px;
+    color: #e2e8f0;
+    border: none;
+}
+
+td:first-child { 
+    border-radius: 10px 0 0 10px; 
+}
+
+td:last-child { 
+    border-radius: 0 10px 10px 0; 
+}
+
+input, select, textarea {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+input:focus {
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+button, .bg-blue-500, .bg-yellow-400, .bg-red-500 {
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+}
+
+.bg-blue-500 { 
+    background-color: #4f46e5; 
+}
+
+.bg-yellow-400 { 
+    background-color: #d97706; 
+}
+
+.bg-red-500 { 
+    background-color: #e11d48; 
+}

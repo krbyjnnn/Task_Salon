@@ -1,0 +1,80 @@
+/* GLOBAL ELEGANT OVERWRITE - NO HTML CHANGES NEEDED */
+
+/* 1. The Main Background & Cards */
+body {
+    background-color: #0f172a !important; /* Deeper Dark Blue */
+}
+
+.bg-white.dark\:bg-gray-800 {
+    background-color: #1e293b !important; /* Elegant Slate */
+    border: 1px solid #334155 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 2. Tables Styling */
+table {
+    border-collapse: separate !important;
+    border-spacing: 0 10px !important; /* Adds breathing room between rows */
+}
+
+thead tr {
+    background: transparent !important;
+}
+
+th {
+    color: #94a3b8 !important;
+    text-transform: uppercase !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.1em !important;
+    padding: 15px !important;
+}
+
+tbody tr {
+    background-color: #0f172a !important; /* Row background */
+    transition: all 0.3s ease !important;
+}
+
+tbody tr:hover {
+    background-color: #334155 !important;
+    transform: translateY(-2px);
+}
+
+td {
+    padding: 15px !important;
+    color: #e2e8f0 !important;
+    border: none !important;
+}
+
+/* Rounding the corners of the rows */
+td:first-child { border-radius: 10px 0 0 10px !important; }
+td:last-child { border-radius: 0 10px 10px 0 !important; }
+
+/* 3. Form Inputs & Buttons */
+input, select, textarea {
+    background-color: #0f172a !important;
+    border: 1px solid #334155 !important;
+    color: #f8fafc !important;
+    border-radius: 8px !important;
+    padding: 10px !important;
+}
+
+input:focus {
+    border-color: #6366f1 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* 4. Action Buttons Fix */
+button, .bg-blue-500, .bg-yellow-400, .bg-red-500 {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.05em !important;
+    transition: all 0.2s !important;
+}
+
+.bg-blue-500 { background-color: #4f46e5 !important; } /* Indigo */
+.bg-yellow-400 { background-color: #d97706 !important; } /* Amber */
+.bg-red-500 { background-color: #e11d48 !important; } /* Rose */
