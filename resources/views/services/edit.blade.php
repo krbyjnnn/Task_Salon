@@ -5,40 +5,27 @@
         </h2>
     </x-slot>
 
-    <div class="py-8">
-        <div class="max-w-2xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
+    <div id="form-container">
+        <div class="form-box">
+            <a href="/services" class="back-link">← Back to Services</a>
+            <form action="/services/{{ $item->id }}" method="POST">
+                @csrf
+                @method('PUT')
 
-                <a href="/services" class="text-sm text-blue-500 hover:underline">← Back to Services</a>
+                <label>Service Name</label>
+                <input type="text" name="name" value="{{ $item->name }}" autocomplete="off">
 
-                <form action="/services/{{ $item->id }}" method="POST" class="mt-4 space-y-4">
-                    @csrf
-                    @method('PUT')
+                <label>Price (₱)</label>
+                <input type="number" name="price" step="0.01" value="{{ $item->price }}" autocomplete="off">
 
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Service Name</label>
-                        <input type="text" name="name" value="{{ $item->name }}" autocomplete="off" class="mt-1 w-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded shadow-sm">
-                    </div>
+                <label>Duration</label>
+                <input type="text" name="duration" value="{{ $item->duration }}" autocomplete="off">
 
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Price (₱)</label>
-                        <input type="number" name="price" step="0.01" value="{{ $item->price }}" autocomplete="off" class="mt-1 w-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded shadow-sm">
-                    </div>
+                <label>Description</label>
+                <textarea name="description" rows="3">{{ $item->description }}</textarea>
 
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Duration</label>
-                        <input type="text" name="duration" value="{{ $item->duration }}" autocomplete="off" class="mt-1 w-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded shadow-sm">
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Description</label>
-                        <textarea name="description" rows="3" class="mt-1 w-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded shadow-sm">{{ $item->description }}</textarea>
-                    </div>
-
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm">Update Service</button>
-                </form>
-
-            </div>
+                <button type="submit">Update Service</button>
+            </form>
         </div>
     </div>
 </x-app-layout>

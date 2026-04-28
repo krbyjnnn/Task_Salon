@@ -11,7 +11,7 @@ class AppointmentController extends Controller
 {
     public function index()
     {
-        $appointments = Appointment::with('service')->latest()->get();
+        $appointments = Appointment::with('service')->oldest()->get();
 
         return view('appointments.index', [
             'items'=> $appointments

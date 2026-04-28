@@ -10,7 +10,7 @@ class PaymentController extends Controller
 {
     public function index()
     {
-        $payments = Payment::with('appointment.service')->latest()->get();
+        $payments = Payment::with('appointment.service')->oldest()->get();
 
         return view('payments.index', [
             'items'=> $payments
